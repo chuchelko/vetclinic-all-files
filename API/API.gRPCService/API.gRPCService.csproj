@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Protos\animal.proto" />
+    <None Remove="Protos\appointment.proto" />
+    <None Remove="Protos\owner.proto" />
+    <None Remove="Protos\services.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos\services.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\appointment.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\animal.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\owner.proto" GrpcServices="Server" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.40.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\API.Resources\API.Resources.csproj" />
+  </ItemGroup>
+
+</Project>

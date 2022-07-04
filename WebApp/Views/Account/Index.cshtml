@@ -1,0 +1,8 @@
+﻿@using API.gRPCService
+@{
+    OwnerModel owner = (OwnerModel)ViewBag.Owner;
+    <h1>Фио: @owner.FirstName @owner.LastName @owner.Patronymic</h1>
+    <h1>Дата рождения: @owner.Birthday</h1>
+    <h1>Номер паспорта: @owner.Passport</h1>
+    <h1>Телефонный номер: @owner.PhoneNumber</h1>
+}

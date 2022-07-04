@@ -1,0 +1,47 @@
+﻿syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "API.gRPCService";
+
+package owner_package;
+
+service OwnerService {
+	rpc CreateOwner(CreateOwnerRequest) returns (CreateOwnerResponse);
+	rpc GetJwtToken(GetTokenRequest) returns (GetTokenResponse);
+	rpc GetOwner(GetOwnerRequest) returns (OwnerModel);
+}
+
+message CreateOwnerRequest {
+	OwnerModel owner = 1;
+	string password = 2;
+}
+
+message CreateOwnerResponse {
+	bool created = 1;
+	string exception_message = 2;
+	string token = 3;
+}
+
+message GetTokenRequest {
+	string phone_number = 1;
+	string password = 2;
+}
+
+message GetTokenResponse {
+	string exception_message = 1;
+	string token = 2;
+}
+
+message OwnerModel {
+	string passport = 1;
+	string first_name = 2;
+	string last_name = 3;
+	string patronymic = 4;
+	google.protobuf.Timestamp birthday = 5;
+	string phone_number = 6;
+}
+
+message GetOwnerRequest {
+
+}

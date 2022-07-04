@@ -1,0 +1,31 @@
+﻿@using API.gRPCService
+@{
+    GetAllAnimalsResponse animals_response = (GetAllAnimalsResponse)ViewBag.Animals;
+    if(animals_response != null)
+    {
+        <a asp-controller="Animals" asp-action="Add">Добавить животное</a>
+        foreach(var animal in animals_response.Animals)
+        {
+            <div>@animal.Nickname</div>
+            <div>@animal.ChipNumber</div>
+            <div>@animal.Birthday</div>
+            <div>@animal.Kind</div>
+            <div>@animal.Breed</div>
+            <a asp-action="Index" asp-route-id="@animal.ChipNumber">Подробнее</a><br>
+        };  
+    }; 
+    Animal animal_response = (Animal)ViewBag.Animal;
+    if(animal_response != null)
+    {
+        <div>@animal_response.Nickname</div>
+        <div>@animal_response.ChipNumber</div>
+        <div>@animal_response.Birthday</div>
+        <div>@animal_response.Kind</div>
+        <div>@animal_response.Breed</div>
+        
+        
+        
+
+    };
+
+}

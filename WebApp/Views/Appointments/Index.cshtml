@@ -1,0 +1,30 @@
+﻿@using API.gRPCService
+@{
+    GetOwnerAppointmentsResponse apps = (GetOwnerAppointmentsResponse)ViewBag.OwnerAppointments;
+    if(apps != null)
+    {
+        <div>Вы записаны:</div>
+        foreach(var appointment in apps.Appointments)
+        {
+            <div>@appointment.ServiceName - дата @appointment.Date</div>
+        }
+    }
+
+    GetAllServicesResponse services = (GetAllServicesResponse)ViewBag.Services;
+        <table cellspacing="2" border="1" cellpadding="5">
+            <tr>
+                <th>Наименование</th>
+                <th>Доктор</th>
+                <th>Цена</th>
+            </tr>
+            @foreach(var service in services.Services)
+            {
+                <tr>
+                    <td>@service.Name</td>
+                    <td>@service.DoctorName</td>
+                    <td>@service.Price - <a asp-controller="Appointments" asp-action="Add" asp-route-doctorphone="@service.DoctorPhone" asp-route-servicename="@service.Name">Записаться</a></td>
+                </tr>
+            }
+        </table>
+    
+}

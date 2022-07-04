@@ -1,0 +1,12 @@
+C:\Users\Emil\source\repos\Витакор собес\API\API.Resources\bin\Debug\net6.0\API.Resources.deps.json
+C:\Users\Emil\source\repos\Витакор собес\API\API.Resources\bin\Debug\net6.0\API.Resources.dll
+C:\Users\Emil\source\repos\Витакор собес\API\API.Resources\bin\Debug\net6.0\ref\API.Resources.dll
+C:\Users\Emil\source\repos\Витакор собес\API\API.Resources\bin\Debug\net6.0\API.Resources.pdb
+C:\Users\Emil\source\repos\Витакор собес\API\API.Resources\obj\Debug\net6.0\API.Resources.csproj.AssemblyReference.cache
+C:\Users\Emil\source\repos\Витакор собес\API\API.Resources\obj\Debug\net6.0\API.Resources.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Emil\source\repos\Витакор собес\API\API.Resources\obj\Debug\net6.0\API.Resources.AssemblyInfoInputs.cache
+C:\Users\Emil\source\repos\Витакор собес\API\API.Resources\obj\Debug\net6.0\API.Resources.AssemblyInfo.cs
+C:\Users\Emil\source\repos\Витакор собес\API\API.Resources\obj\Debug\net6.0\API.Resources.csproj.CoreCompileInputs.cache
+C:\Users\Emil\source\repos\Витакор собес\API\API.Resources\obj\Debug\net6.0\API.Resources.dll
+C:\Users\Emil\source\repos\Витакор собес\API\API.Resources\obj\Debug\net6.0\ref\API.Resources.dll
+C:\Users\Emil\source\repos\Витакор собес\API\API.Resources\obj\Debug\net6.0\API.Resources.pdb

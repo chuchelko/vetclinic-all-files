@@ -1,0 +1,41 @@
+﻿syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "API.gRPCService";
+
+package services_package;
+
+service ServicesService {
+	rpc GetAllServices(GetAllServicesRequest) returns (GetAllServicesResponse);
+	rpc GetProvidedServices(GetProvidedServicesRequest) returns (GetProvidedServicesResponse);
+}
+
+message GetProvidedServicesRequest {
+}
+
+message GetProvidedServicesResponse {
+	repeated ProvidedService services = 1;
+}
+
+message ProvidedService {
+	google.protobuf.Timestamp date = 1;
+	string doctor_name = 2;
+	string name = 3;
+	string animal_chip_number = 4;
+	string price = 5;
+}
+
+message GetAllServicesRequest {
+}
+
+message GetAllServicesResponse {
+	repeated Service services = 1;
+}
+
+message Service {
+	string name = 1;
+	string doctor_phone = 2;
+	string doctor_name = 3;
+	string price = 4;
+}

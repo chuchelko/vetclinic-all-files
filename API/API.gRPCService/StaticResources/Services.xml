@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<services>
+	<service>
+		<name>Первичный осмотр терапевта</name>
+		<doctorPhone>+7 (962) 915-84-32</doctorPhone>
+		<doctorName>Рихтер А.А.</doctorName>
+		<price>1000 р.</price>
+	</service>
+	<service>
+		<name>Повторный осмотр терапевта</name>
+		<doctorPhone>+7 (962) 915-84-32</doctorPhone>
+		<doctorName>Рихтер А.А.</doctorName>
+		<price>1000 р.</price>
+	</service>
+	<service>
+		<name>Удаление гематомы</name>
+		<doctorPhone>+7 (952) 944-54-44</doctorPhone>
+		<doctorName>Калинин В.А.</doctorName>
+		<price>2500 р.</price>
+	</service>
+</services>

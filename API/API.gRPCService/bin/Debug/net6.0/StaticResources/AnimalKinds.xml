@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<animals>
+	<animal name="Кошка">
+		<breed name="Персидская"/>
+		<breed name="Мейн-кун"/>
+		<breed name="Сиамская"/>
+		<breed name="Сфинкс"/>
+		<breed name="Другая"/>
+	</animal>
+	<animal name="Собака">
+		<breed name="Английский бульдог"/>
+		<breed name="Лабрадор"/>
+		<breed name="Немецкая овчарка"/>
+		<breed name="Пудель"/>
+		<breed name="Другая"/>
+	</animal>
+	<animal name="Попугай">
+		<breed name="Жако"/>
+		<breed name="Амазон"/>
+		<breed name="Какаду"/>
+		<breed name="Ара"/>
+		<breed name="Волнистый"/>
+		<breed name="Другая"/>
+	</animal>
+	<animal name="Хомяк">
+		<breed name="Обыкновенный"/>
+		<breed name="Сирийский"/>
+		<breed name="Китайский"/>
+		<breed name="Джунгарский"/>
+		<breed name="Другая"/>
+	</animal>
+	<animal name="Черепаха">
+		<breed name="Бахромчатая"/>
+		<breed name="Головастая иловая"/>
+		<breed name="Европейская болотная"/>
+		<breed name="Звездчатая черепаха"/>
+		<breed name="Другая"/>
+	</animal>
+</animals>

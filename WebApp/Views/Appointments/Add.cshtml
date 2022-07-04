@@ -1,0 +1,23 @@
+﻿@using API.gRPCService
+@{
+    GetWeekAppointmentsResponse weekAppointments = (GetWeekAppointmentsResponse)ViewBag.Appointments;
+    foreach(var appointment in weekAppointments.Appointments)
+    {
+        var dt = appointment.ToDateTime();
+        string minutes;
+        if(dt.Minute < 10)
+        {
+            minutes = "0" + dt.Minute.ToString();
+        }
+        else
+        {
+            minutes = dt.Minute.ToString();
+        }
+        <form id="form-@dt.ToString().Replace(' ', '-').Replace('.', '-').Replace(':', '-')" asp-action="PostForm" method="post" style="display: none">
+            <input type="hidden" name="ticks" value="@dt.Ticks"><input>
+            <input type="hidden" name="doctorPhone" value="@(ViewBag.DoctorPhone as string)"><input>
+            <input type="hidden" name="serviceName" value="@(ViewBag.ServiceName as string)"><input>
+        </form>
+        <a onclick="$('#form-@dt.ToString().Replace(' ', '-').Replace('.', '-').Replace(':', '-')').submit(); return false;">@dt.Day.@dt.Month - @dt.Hour:@minutes</a><br/>
+    }
+}

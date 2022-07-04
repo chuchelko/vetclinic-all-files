@@ -1,0 +1,3 @@
+obj\Release\net6.0\Protos/Owner.cs \
+obj\Release\net6.0\Protos/OwnerGrpc.cs: C:/Users/Emil/.nuget/packages/grpc.tools/2.47.0/build/native/include/google/protobuf/timestamp.proto\
+ Protos/owner.proto

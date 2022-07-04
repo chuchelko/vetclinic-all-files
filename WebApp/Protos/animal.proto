@@ -1,0 +1,76 @@
+﻿syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "API.gRPCService";
+
+package animal_package;
+
+service AnimalService {
+	rpc CreateAnimal(CreateAnimalRequest) returns (CreateAnimalResponse);
+	rpc GetAllAnimals(GetAllAnimalsRequest) returns (GetAllAnimalsResponse);
+	rpc DeleteAnimal(DeleteAnimalRequest) returns (DeleteAnimalResponse);
+	rpc GetBreeds(GetBreedsRequest) returns (GetBreedsResponse);
+	rpc GetDiseases(GetDiseasesRequest) returns (GetDiseasesResponse);
+}
+
+message GetDiseasesRequest {
+	string chip_number = 1;
+}
+
+message GetDiseasesResponse {
+	repeated Disease diseases = 1;
+	string exception_message = 2;
+}
+
+message Disease {
+	string name = 1;
+	string doctor_name = 2;
+	string classification_code = 3;
+	string animal_status = 4;
+	string treatment = 5;
+	string additional_information = 6;
+}
+
+message GetBreedsRequest {
+	string kind = 1;
+}
+
+message GetBreedsResponse {
+	repeated string breeds = 1;
+}
+
+message DeleteAnimalRequest {
+	string chip_number = 1;
+}
+
+message DeleteAnimalResponse {
+	bool deleted = 1;
+	string exception_message = 2;
+}
+
+message CreateAnimalRequest {
+	Animal animal = 1;
+}
+
+message CreateAnimalResponse {
+	bool created = 1;
+	string exception_message = 2;
+}
+
+message GetAllAnimalsRequest {
+}
+
+message GetAllAnimalsResponse {
+	repeated Animal animals = 1;
+}
+
+message Animal {
+	string chip_number = 1;
+	string kind = 2;
+	string breed = 3;
+	string color = 4;
+	string specific_traits = 5;
+	google.protobuf.Timestamp birthday = 6;
+	string nickname = 7;
+}
